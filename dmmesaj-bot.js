@@ -1,5 +1,20 @@
+/**
+ * Discord DM Bot
+ * 
+ * BOT TOKEN KURULUMU:
+ * 1. Discord Developer Portal'a git: https://discord.com/developers/applications
+ * 2. "New Application" oluştur ve bot adını yaz
+ * 3. Sol menüden "Bot" seç ve "Add Bot" tıkla
+ * 4. "TOKEN" bölümünde "Copy" tıklayarak token'ı kopyala
+ * 5. Proje dosyasında .env dosyası oluştur
+ * 6. BOT_TOKEN=<kopyalanan_token> şeklinde yapıştır
+ * 7. .env dosyasını .gitignore'a ekle (güvenlik için)
+ * 
+ * Not: BOT_TOKEN değişkeni bu dosya tarafından process.env.BOT_TOKEN'den okunur
+ */
+
 const { Client, GatewayIntentBits, Partials, PermissionFlagsBits } = require('discord.js');
-require('dotenv').config();
+require('dotenv').config();  // .env dosyasından ortam değişkenlerini yükle
 
 const client = new Client({
   intents: [
